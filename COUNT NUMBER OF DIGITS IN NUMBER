@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num;
+	int cnt=0;
+	cout<<"ENTER THE NUMBER WHOOSE DIGIT ARE TO BE COUNTED: "<<endl;
+	cin>>num;
+	while(num>0)
+	{
+		int ldigit=num%10;
+		cnt++;
+		num=num/10;
+	}
+	cout<<"THE COUNTER IS: "<<cnt;
+}
