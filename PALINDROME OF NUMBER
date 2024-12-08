@@ -1,0 +1,15 @@
+bool palindrome(int n)
+{
+   int num=n;
+   int revnum=0;
+   while(n!=0)
+   {
+       int digi=n%10;
+       revnum=(revnum*10)+digi;
+       n=n/10;
+   }
+   if(revnum==num)
+   return true;
+   else
+   return false;
+}
