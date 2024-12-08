@@ -1,0 +1,23 @@
+#include <cmath> // For pow function
+
+bool checkArmstrong(int n) {
+    int num = n;   // Original number
+    int sum = 0;
+    int digits = 0;
+
+    // Calculate the number of digits
+    int temp = n;
+    while (temp > 0) {
+        digits++;
+        temp /= 10;
+    }
+
+    // Check Armstrong condition
+    while (n > 0) {
+        int digi = n % 10; // Extract the last digit
+        sum += pow(digi, digits); // Raise digit to the power of total digits
+        n /= 10; // Remove the last digit
+    }
+
+    return sum == num; // True if Armstrong, otherwise false
+}
