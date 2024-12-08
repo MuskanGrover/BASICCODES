@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num;
+	cout<<"ENTER THE NUMBER WHOOSE DIGIT ARE TO BE EXTRACTED: "<<endl;
+	cin>>num;
+	while(num>0)
+	{
+		int ldigit=num%10;
+		cout<<ldigit<<" ";
+		num=num/10;
+	}
+}
